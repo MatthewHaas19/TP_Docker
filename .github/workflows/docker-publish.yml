@@ -27,5 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: ./gradlew assemble
       - run: ./gradlew check -Pdatabase.url=postgres:5432/tp_devops
+      - run: docker build /docker/ -t matthewhaas/tp-devops
+      - run: docker push matthewhaas/tp-devops
 
   
