@@ -1,0 +1,18 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: tp_devops
+      POSTGRES_DB: tp_devops
+      POSTGRES_USER: tp_devops
+  app:
+    image: matthewhaas/tp-devops
+    environment:
+      username: tp_devops
+      password: tp_devops
+      url: db:5432/tp_devops
+    ports:
+      - "8080:8080"

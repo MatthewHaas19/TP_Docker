@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.gleroy.devops.tp.docker.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-25T12:12:50" hostname="matthew-VirtualBox" time="0.946">
+  <properties/>
+  <testcase name="up()" classname="dev.gleroy.devops.tp.docker.AppTest" time="0.946"/>
+  <system-out><![CDATA[2020-09-25 14:12:50.525 [Test worker] INFO  ktor.test - No ktor.deployment.watch patterns specified, automatic reload is not active
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
