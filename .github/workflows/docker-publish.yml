@@ -8,7 +8,7 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
-    container: openjdk-8-jre
+    container: openjdk:8-jdk
     services:
       # Label used to access the service container
       postgres:
@@ -26,6 +26,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ./gradlew assemble
-      - run: ./gradlew check
+      - run: ./gradlew check -Pdatabase.url=postgres:5432/tp_devops
 
   
