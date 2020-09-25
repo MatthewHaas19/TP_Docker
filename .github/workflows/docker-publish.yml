@@ -44,5 +44,5 @@ jobs:
         with:
           username: ${{ secrets.username }}
           password: ${{ secrets.password }}
-      - run: docker build /docker/ -t matthewhaas/tp-devops 
+      - run: docker build ./docker/Dockerfile -t matthewhaas/tp-devops 
       - run: docker push matthewhaas/tp-devops
