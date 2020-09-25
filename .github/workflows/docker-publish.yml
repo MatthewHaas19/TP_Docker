@@ -8,11 +8,24 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
+    container: openjdk-8-jre
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres:latest
+        
+        # Provide the password for postgres
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_PASSWORD: tp_devops
+          POSTGRES_DB: tp_devops
+          POSTGRES_USER: tp_devops
 
     steps:
       - uses: actions/checkout@v2
       - run: ./gradlew assemble
-      - run: docker-compose up
       - run: ./gradlew check
 
   
